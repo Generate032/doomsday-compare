@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOOMSDAY COMPARE</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Chart.js para el gráfico de radar -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- 1. BARRA LATERAL IZQUIERDA -->
+    <aside class="sidebar-left">
+        <div class="brand">
+            <div class="logo-box">⚡</div>
+            <div class="logo-text">
+                <span class="title">DOOMSDAY</span>
+                <span class="subtitle">COMPARE</span>
+            </div>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="#" class="active">🏠 INICIO</a>
+            <a href="#">⚔️ COMPARAR</a>
+            <a href="#">👤 PERSONAJES</a>
+            <a href="#">🏆 RANKING</a>
+            <a href="#">💥 BATALLAS</a>
+            <a href="#">📊 PROBABILIDADES</a>
+            <a href="#">❤️ FAVORITOS</a>
+        </nav>
+
+        <div class="cta-box">
+            <h3>CREA TU BATALLA</h3>
+            <p>Elige tus personajes favoritos y descubre quién saldría victorioso.</p>
+            <button class="btn-cta">COMENZAR ⚡</button>
+        </div>
+
+        <div class="sidebar-footer">
+            <p>&copy; 2026 Doomsday Compare</p>
+        </div>
+    </aside>
+
+    <!-- 2. CONTENEDOR CENTRAL -->
+    <main class="main-container">
+        <!-- Barra superior -->
+        <header class="top-header">
+            <div class="search-bar">
+                <span>🔍</span>
+                <input type="text" placeholder="Buscar personaje...">
+            </div>
+            <div class="header-actions">
+                <button class="btn-icon">🌙</button>
+                <button class="btn-login">INICIAR SESIÓN</button>
+            </div>
+        </header>
+
+        <!-- Banner de Bienvenida -->
+        <section class="hero-banner">
+            <div class="hero-text">
+                <h1>¿QUIÉN SERÁ<br>LA CLAVE EN<br><span class="highlight">DOOMSDAY?</span></h1>
+                <p>Compara personajes, analiza estadísticas y descubre quién es el más poderoso.</p>
+            </div>
+        </section>
+
+        <!-- ZONA DE COMBATE Y GRÁFICO (FASE 2) -->
+        <section class="battle-section">
+            <div class="fighter-selector">
+                <label>PERSONAJE 1</label>
+                <select id="fighter1-select" class="select-box">
+                    <option value="">Seleccionar personaje</option>
+                </select>
+            </div>
+
+            <div class="radar-container">
+                <canvas id="radarChart"></canvas>
+            </div>
+
+            <div class="fighter-selector">
+                <label>PERSONAJE 2</label>
+                <select id="fighter2-select" class="select-box">
+                    <option value="">Seleccionar personaje</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE RESULTADO -->
+        <section id="result-section" class="result-section hidden">
+            <p class="result-title">RESULTADO</p>
+            <div class="result-display">
+                <span id="score1-text" class="score-num">0%</span>
+                <span id="winner-text" class="verdict">EMPATE</span>
+                <span id="score2-text" class="score-num">0%</span>
+            </div>
+        </section>
+    </main>
+
+    <!-- 3. BARRA LATERAL DERECHA -->
+    <aside class="sidebar-right">
+        <div class="panel">
+            <h3>PROBABILIDAD DE APARICIÓN</h3>
+            <div class="panel-content">
+                <p class="placeholder-text">Doctor Doom — 100%</p>
+                <p class="placeholder-text">Fantastic Four — Alta</p>
+                <p class="placeholder-text">X-Men — Alta</p>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h3>RANKING DE PODER</h3>
+            <div class="panel-content">
+                <p class="placeholder-text">1 🥇 Doctor Doom — 98.5</p>
+                <p class="placeholder-text">2 🥈 Thor Odinson — 95.0</p>
+                <p class="placeholder-text">3 🥉 Doctor Strange — 92.3</p>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h3>BATALLAS RECIENTES</h3>
+            <div class="panel-content">
+                <p class="placeholder-text">Thor vs Hulk (Ver resultado)</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Archivo de Lógica JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
