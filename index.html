@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <!-- Chart.js para el gráfico de radar -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -57,32 +60,51 @@
             </div>
         </header>
 
-        <!-- Banner de Bienvenida -->
+       <!-- Banner de Bienvenida -->
         <section class="hero-banner">
             <div class="hero-text">
                 <h1>¿QUIÉN SERÁ<br>LA CLAVE EN<br><span class="highlight">DOOMSDAY?</span></h1>
                 <p>Compara personajes, analiza estadísticas y descubre quién es el más poderoso.</p>
             </div>
+            <div class="hero-visual">
+                <div class="vs-badge">VS</div>
+            </div>
         </section>
 
-        <!-- ZONA DE COMBATE Y GRÁFICO (FASE 2) -->
+       <!-- ZONA DE COMBATE: EQUIPO VS DOOM -->
         <section class="battle-section">
-            <div class="fighter-selector">
-                <label>PERSONAJE 1</label>
-                <select id="fighter1-select" class="select-box">
-                    <option value="">Seleccionar personaje</option>
-                </select>
+            <div class="team-selectors">
+                <h3>SELECCIONA TU EQUIPO (4 HÉROES)</h3>
+                <div class="selectors-grid">
+                    <div class="fighter-selector">
+                        <label>HÉROE 1</label>
+                        <select id="fighter1-select" class="select-box">
+                            <option value="">Seleccionar</option>
+                        </select>
+                    </div>
+                    <div class="fighter-selector">
+                        <label>HÉROE 2</label>
+                        <select id="fighter2-select" class="select-box">
+                            <option value="">Seleccionar</option>
+                        </select>
+                    </div>
+                    <div class="fighter-selector">
+                        <label>HÉROE 3</label>
+                        <select id="fighter3-select" class="select-box">
+                            <option value="">Seleccionar</option>
+                        </select>
+                    </div>
+                    <div class="fighter-selector">
+                        <label>HÉROE 4</label>
+                        <select id="fighter4-select" class="select-box">
+                            <option value="">Seleccionar</option>
+                        </select>
+                    </div>
+                </div>
             </div>
 
             <div class="radar-container">
                 <canvas id="radarChart"></canvas>
-            </div>
-
-            <div class="fighter-selector">
-                <label>PERSONAJE 2</label>
-                <select id="fighter2-select" class="select-box">
-                    <option value="">Seleccionar personaje</option>
-                </select>
             </div>
         </section>
 

@@ -184,8 +184,19 @@ body {
     border-color: var(--accent-magenta);
 }
 
+/* --- ESTILOS DEL HERO BANNER Y EL VS --- */
 .hero-banner {
+    background: linear-gradient(90deg, rgba(16, 20, 30, 0.95) 0%, rgba(26, 15, 45, 0.75) 100%), 
+                radial-gradient(circle at 75% 50%, rgba(184, 78, 255, 0.15) 0%, transparent 60%);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 25px 30px;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-text h1 {
@@ -203,6 +214,25 @@ body {
     color: var(--text-muted);
     font-size: 0.9rem;
     margin-top: 8px;
+}
+
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 40px;
+}
+
+.vs-badge {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-style: italic;
+    background: linear-gradient(135deg, var(--accent-magenta), var(--accent-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 25px rgba(184, 78, 255, 0.4);
+    letter-spacing: 2px;
 }
 
 /* --- ZONA DE COMBATE --- */
@@ -320,4 +350,27 @@ body {
 .placeholder-text {
     font-size: 0.85rem;
     color: var(--text-main);
+.team-selectors {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 320px;
+}
+
+.team-selectors h3 {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    color: var(--accent-cyan);
+    letter-spacing: 1px;
+}
+
+.selectors-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.selectors-grid .fighter-selector {
+    width: 100%;
+}
 }
