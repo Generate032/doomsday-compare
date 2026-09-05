@@ -10,8 +10,8 @@
     <!-- Chart.js para el gráfico de radar -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -26,13 +26,13 @@
         </div>
 
         <nav class="nav-menu">
-            <a href="#" class="active">🏠 INICIO</a>
-            <a href="#">⚔️ COMPARAR</a>
-            <a href="#">👤 PERSONAJES</a>
-            <a href="#">🏆 RANKING</a>
-            <a href="#">💥 BATALLAS</a>
-            <a href="#">📊 PROBABILIDADES</a>
-            <a href="#">❤️ FAVORITOS</a>
+            <a href="#" id="nav-inicio" class="active">🏠 INICIO</a>
+            <a href="#" id="nav-comparar">⚔️ COMPARAR</a>
+            <a href="#" id="nav-personajes">👤 PERSONAJES</a>
+            <a href="#" id="nav-ranking">🏆 RANKING</a>
+            <a href="#" id="nav-batallas">💥 BATALLAS</a>
+            <a href="#" id="nav-probabilidades">📊 PROBABILIDADES</a>
+            <a href="#" id="nav-favoritos">❤️ FAVORITOS</a>
         </nav>
 
         <div class="cta-box">
@@ -60,61 +60,84 @@
             </div>
         </header>
 
-       <!-- Banner de Bienvenida -->
-        <section class="hero-banner">
-            <div class="hero-text">
-                <h1>¿QUIÉN SERÁ<br>LA CLAVE EN<br><span class="highlight">DOOMSDAY?</span></h1>
-                <p>Compara personajes, analiza estadísticas y descubre quién es el más poderoso.</p>
-            </div>
-            <div class="hero-visual">
-                <div class="vs-badge">VS</div>
-            </div>
-        </section>
+        <!-- CONTENEDOR DE LA VISTA INICIO / BATALLA -->
+        <div id="inicio-section">
+           <!-- Banner de Bienvenida -->
+            <section class="hero-banner">
+                <div class="hero-text">
+                    <h1>¿QUIÉN SERÁ<br>LA CLAVE EN<br><span class="highlight">DOOMSDAY?</span></h1>
+                    <p>Compara personajes, analiza estadísticas y descubre quién es el más poderoso.</p>
+                </div>
+                <div class="hero-visual">
+                    <div class="vs-badge">VS</div>
+                </div>
+            </section>
 
-       <!-- ZONA DE COMBATE: EQUIPO VS DOOM -->
-        <section class="battle-section">
-            <div class="team-selectors">
-                <h3>SELECCIONA TU EQUIPO (4 HÉROES)</h3>
-                <div class="selectors-grid">
-                    <div class="fighter-selector">
-                        <label>HÉROE 1</label>
-                        <select id="fighter1-select" class="select-box">
-                            <option value="">Seleccionar</option>
-                        </select>
-                    </div>
-                    <div class="fighter-selector">
-                        <label>HÉROE 2</label>
-                        <select id="fighter2-select" class="select-box">
-                            <option value="">Seleccionar</option>
-                        </select>
-                    </div>
-                    <div class="fighter-selector">
-                        <label>HÉROE 3</label>
-                        <select id="fighter3-select" class="select-box">
-                            <option value="">Seleccionar</option>
-                        </select>
-                    </div>
-                    <div class="fighter-selector">
-                        <label>HÉROE 4</label>
-                        <select id="fighter4-select" class="select-box">
-                            <option value="">Seleccionar</option>
-                        </select>
+           <!-- ZONA DE COMBATE: EQUIPO VS DOOM -->
+            <section class="battle-section">
+                <div class="team-selectors">
+                    <h3>SELECCIONA TU EQUIPO (4 HÉROES)</h3>
+                    <div class="selectors-grid">
+                        <div class="fighter-selector">
+                            <label>HÉROE 1</label>
+                            <select id="fighter1-select" class="select-box">
+                                <option value="">Seleccionar</option>
+                            </select>
+                        </div>
+                        <div class="fighter-selector">
+                            <label>HÉROE 2</label>
+                            <select id="fighter2-select" class="select-box">
+                                <option value="">Seleccionar</option>
+                            </select>
+                        </div>
+                        <div class="fighter-selector">
+                            <label>HÉROE 3</label>
+                            <select id="fighter3-select" class="select-box">
+                                <option value="">Seleccionar</option>
+                            </select>
+                        </div>
+                        <div class="fighter-selector">
+                            <label>HÉROE 4</label>
+                            <select id="fighter4-select" class="select-box">
+                                <option value="">Seleccionar</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="radar-container">
-                <canvas id="radarChart"></canvas>
-            </div>
-        </section>
+                <div class="radar-container">
+                    <canvas id="radarChart"></canvas>
+                </div>
+            </section>
 
-        <!-- SECCIÓN DE RESULTADO -->
-        <section id="result-section" class="result-section hidden">
-            <p class="result-title">RESULTADO</p>
-            <div class="result-display">
-                <span id="score1-text" class="score-num">0%</span>
-                <span id="winner-text" class="verdict">EMPATE</span>
-                <span id="score2-text" class="score-num">0%</span>
+            <!-- SECCIÓN DE SIMULACIÓN DE BATALLA (OCULTA POR DEFECTO) -->
+            <section id="battle-simulation" class="battle-sim-section hidden">
+                <div class="sim-content">
+                    <h2 class="sim-title">💥 ¡BATALLA EN PROCESO EN DOOMSDAY! 💥</h2>
+                    <div class="sim-loader"></div>
+                    <p id="sim-status-text" class="sim-text">Analizando fuerzas del equipo contra Doctor Doom...</p>
+                </div>
+            </section>
+
+            <!-- SECCIÓN DE RESULTADO -->
+            <section id="result-section" class="result-section hidden">
+                <p class="result-title">RESULTADO</p>
+                <div class="result-display">
+                    <span id="score1-text" class="score-num">0%</span>
+                    <span id="winner-text" class="verdict">EMPATE</span>
+                    <span id="score2-text" class="score-num">0%</span>
+                </div>
+            </section>
+        </div> <!-- Fin de #inicio-section -->
+
+        <!-- SECCIÓN DE PERSONAJES (Galería - Oculta por defecto) -->
+        <section id="characters-section" class="main-section hidden">
+            <div class="section-header">
+                <h2 class="section-title">REGISTRO DE PERSONAJES</h2>
+                <p class="section-subtitle">Explora las estadísticas y expedientes del multiverso</p>
+            </div>
+            <div id="characters-grid" class="characters-grid">
+                <!-- Las tarjetas se cargarán dinámicamente con JavaScript -->
             </div>
         </section>
     </main>

@@ -247,11 +247,31 @@ body {
     margin-top: 10px;
 }
 
+.team-selectors {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 320px;
+}
+
+.team-selectors h3 {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    color: var(--accent-cyan);
+    letter-spacing: 1px;
+}
+
+.selectors-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
 .fighter-selector {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    width: 200px;
+    width: 100%;
 }
 
 .fighter-selector label {
@@ -278,6 +298,99 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* --- GALERÍA DE PERSONAJES --- */
+.characters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.character-card {
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.character-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-cyan);
+}
+
+.char-img-container {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background: #000;
+}
+
+.char-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.char-info {
+    padding: 15px;
+}
+
+.char-info h3 {
+    font-family: var(--font-heading);
+    color: var(--accent-cyan);
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.char-info p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin: 3px 0;
+}
+
+/* --- SECCIÓN DE SIMULACIÓN DE BATALLA --- */
+.battle-sim-section {
+    background: rgba(16, 20, 30, 0.95);
+    border: 2px solid var(--accent-cyan);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    margin-top: 15px;
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.2);
+}
+
+.sim-title {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--accent-cyan);
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.sim-text {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--text-main);
+    margin-top: 15px;
+}
+
+.sim-loader {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-top: 4px solid var(--accent-magenta);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 /* --- RESULTADOS --- */
@@ -317,10 +430,6 @@ body {
     color: var(--accent-magenta);
 }
 
-.hidden {
-    display: none;
-}
-
 /* --- BARRA LATERAL DERECHA --- */
 .sidebar-right {
     background: var(--panel-bg);
@@ -350,27 +459,9 @@ body {
 .placeholder-text {
     font-size: 0.85rem;
     color: var(--text-main);
-.team-selectors {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 320px;
 }
 
-.team-selectors h3 {
-    font-family: var(--font-heading);
-    font-size: 0.85rem;
-    color: var(--accent-cyan);
-    letter-spacing: 1px;
-}
-
-.selectors-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-}
-
-.selectors-grid .fighter-selector {
-    width: 100%;
-}
+/* --- CLASE DE UTILIDAD PARA OCULTAR --- */
+.hidden {
+    display: none !important;
 }
