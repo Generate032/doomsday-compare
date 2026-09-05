@@ -1,15 +1,48 @@
 const characters = [
-    { name: "Doctor Doom", stats: [98, 85, 95, 100, 92], image: "https://i.imgur.com/82V96q3.png" },
-    { name: "Thor", stats: [95, 90, 98, 75, 88], image: "https://i.imgur.com/95Z96q3.png" },
-    { name: "Iron Man", stats: [88, 85, 85, 98, 90], image: "https://i.imgur.com/35Z96q3.png" },
-    { name: "Hulk", stats: [96, 75, 100, 60, 70], image: "https://i.imgur.com/45Z96q3.png" },
-    { name: "Capitán América", stats: [70, 78, 82, 85, 95], image: "https://i.imgur.com/55Z96q3.png" },
-    { name: "Doctor Strange", stats: [92, 80, 85, 96, 95], image: "https://i.imgur.com/65Z96q3.png" },
-    { name: "Mr. Fantastico", stats: [75, 80, 88, 99, 90], image: "https://i.imgur.com/75Z96q3.png" },
-    { name: "Cyclope", stats: [85, 82, 78, 85, 92], image: "https://i.imgur.com/85Z96q3.png" },
-    { name: "Profesor X", stats: [90, 60, 65, 100, 98], image: "https://i.imgur.com/95Z96q3.png" },
-    { name: "Magneto", stats: [94, 82, 85, 95, 90], image: "https://i.imgur.com/16Z96q3.png" },
-    { name: "Loki", stats: [88, 85, 80, 96, 94], image: "https://i.imgur.com/26Z96q3.png" }
+    { name: "Doctor Doom", stats: [98, 85, 95, 100, 92], image: "https://live.staticflickr.com/2938/14584938129_cf3647218b_o.jpg" },
+    { name: "Thor", stats: [95, 90, 98, 75, 88], image: "https://i.pinimg.com/736x/40/74/71/40747151783756ff94b39e018048d30e.jpg" },
+    { name: "Iron Man", stats: [88, 85, 85, 98, 90], image: "https://images.unsplash.com/photo-1635863138275-d9b33299680b?w=500&auto=format&fit=crop&q=60" },
+
+    {
+        name: "Hulk",
+        stats: [96, 75, 100, 60, 70],
+        image: "https://fotografias-2.larazon.es/assets/videojuegos/2022/11/image-2.1668691576.jpg?height=720&width=1200"
+    },
+    {
+        name: "Capitán América",
+        stats: [70, 78, 82, 85, 95],
+        image: "https://upload.wikimedia.org/wikipedia/commons/e/eb/Captain_America_%2811641552226%29.jpg"
+    },
+    {
+        name: "Doctor Strange",
+        stats: [92, 80, 85, 96, 95],
+        image: "https://hdqwalls.com/download/doctor-strange-wallpaper-1920x1080.jpg"
+    },
+    {
+        name: "Mr. Fantastico",
+        stats: [75, 80, 88, 99, 90],
+        image: "https://upload.wikimedia.org/wikipedia/commons/0/09/Mr_Fantastic_1.jpg"
+    },
+    {
+        name: "Cyclope",
+        stats: [85, 82, 78, 85, 92],
+        image: "https://live.staticflickr.com/8151/7560668046_429a087537_o.jpg"
+    },
+    {
+        name: "Profesor X",
+        stats: [90, 60, 65, 100, 98],
+        image: "https://www.edmovieguide.com/images/news/2017/02/patrick-stewart.jpg"
+    },
+    {
+        name: "Magneto",
+        stats: [94, 82, 85, 95, 90],
+        image: "https://i.kym-cdn.com/photos/images/newsfeed/001/006/204/cf9.jpg"
+    },
+    {
+        name: "Loki",
+        stats: [88, 85, 80, 96, 94],
+        image: "https://i.kym-cdn.com/photos/images/newsfeed/001/006/204/cf9.jpg"
+    }
 ];
 
 const select1 = document.getElementById('fighter1-select');
